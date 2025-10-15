@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #f5f3f0;
+  --bg-secondary: #fafaf8;
+  --text-primary: #4a4a4a;
+  --text-secondary: #7a7a7a;
+  --accent: #d4c5b9;
+  --accent-light: #e8dfd7;
+  --border: #e0dcd8;
+}
+
+body {
+  font-family: 'Noto Serif JP', 'Georgia', serif;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 16px;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  padding: 3rem 2.5rem;
+  border-radius: 2px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--accent-light);
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: var(--accent);
+}
+
+h1 {
+  font-family: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+main {
+  margin-bottom: 3rem;
+}
+
+.essay p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.essay p:first-child::first-letter {
+  font-size: 3.5rem;
+  line-height: 1;
+  float: left;
+  margin: 0.1rem 0.15rem 0 0;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--accent-light);
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.mark {
+  font-size: 1.2rem;
+  color: var(--accent);
+  letter-spacing: 0.3em;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .essay p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .container {
+    padding: 1.5rem 1.25rem;
+  }
+}
